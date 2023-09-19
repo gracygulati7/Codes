@@ -1,2 +1,3 @@
-cout<< "whats your name? " <<endl;
-    getline(cin,name);
+void bakepizza(string topping1){
+//     cout<<"here is your "<< topping1 <<"pizza"<<endl;
+// }
