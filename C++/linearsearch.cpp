@@ -4,6 +4,7 @@ int linearsearch(int arr[],int n,int key){
     for(int i=0;i<n;i++){
         if (arr[i]==key){
             return i;
+            // return 1;
             }
         }
         return -1;
@@ -29,6 +30,12 @@ int main(){
     // else {
     //     cout << "not exists" << endl;
     // }
-    cout <<linearsearch(arr,n,key)<<endl;
+    // cout <<linearsearch(arr,n,key)<<endl;
+    int index = linearsearch(arr, n, key);
+    if (index != -1) {
+        cout << "The element exists at index " << index << endl;
+    } else {
+        cout << "The element does not exist in the array" << endl;
+    }
     return 0;
 }
