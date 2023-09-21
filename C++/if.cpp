@@ -13,5 +13,4 @@ else if (n<18){
 else{
     cout << "you're adult" << endl;
 }
-
 }
