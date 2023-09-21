@@ -147,3 +147,33 @@ int main(){
     cout <<"result of ncr is: "<<ncr(n,r)<<endl;
 } */
 
+/* //!unique element in array
+#include<iostream>
+using namespace std;
+int uniquearrayelement(int arr[], int n) {
+    for(int i=0; i<n; i++) {
+        bool isUnique = true;
+        for(int j=0; j<n; j++) {
+            if(i != j && arr[i] == arr[j]) {
+                isUnique = false;
+                break;
+            }
+        }
+        if(isUnique) {
+            return arr[i];
+        }
+    }
+    return 0;
+}
+int main(){
+    int n;
+    cout<<"enter total number of elements"<<endl;
+    cin>>n;
+    int arr[n];
+    cout<<"enter array elements: "<<endl;
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    cout<<"unique element is: "<< uniquearrayelement(arr,n)<<endl;
+} */
+
