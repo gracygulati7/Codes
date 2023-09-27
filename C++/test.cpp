@@ -147,7 +147,8 @@ int main(){
     cout <<"result of ncr is: "<<ncr(n,r)<<endl;
 } */
 
-/* //!unique element in array
+ /* //!unique element in array
+
 #include<iostream>
 using namespace std;
 int uniquearrayelement(int arr[], int n) {
@@ -198,6 +199,5 @@ int main(){
 }
 //* NOTE- this method only applies for even multiple occurences 
 //*       of a no. it dosent work on od multiple occurences.
-
 */
 
