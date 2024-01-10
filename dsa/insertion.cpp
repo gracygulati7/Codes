@@ -1,7 +1,8 @@
 #include<iostream>
 using namespace std;
 int main(){
-    int n;
+    //! inserting at 0th index
+    /* int n;
     cin>>n;
     int arr[1000];
     for(int i=0;i<n;i++){
@@ -13,6 +14,26 @@ int main(){
         arr[i+1]=arr[i];
     }
     arr[0]=num;
+    n++;
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    } */
+
+    //! insertion at kth element
+    int n;
+    cin>>n;
+    int arr[1000];
+    for(int i=0;i<n;i++){
+    cin>>arr[i];
+    }
+    int num;
+    cin>>num;
+    int k;
+    cin>>k;
+    for(int i=n-1;i>=k;i--){
+        arr[i+1]=arr[i];
+    }
+    arr[k]=num;
     n++;
     for(int i=0;i<n;i++){
         cout<<arr[i]<<" ";
