@@ -14,8 +14,8 @@ int main(){
     int target;
     cin>>target;
     for(int i=0;i<n;i++){
-        for(int j=0;j<n;j++){
-            if(arr[j]-arr[i]==target){
+        for(int j=i+1;j<n;j++){
+            if(abs(arr[j]-arr[i])==target){
                 cout<<arr[j]<<" "<<arr[i]<<endl;
             }
         }
