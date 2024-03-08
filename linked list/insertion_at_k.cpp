@@ -1,5 +1,4 @@
-//! inserting in a linked list at tail of list
-//* tail is a pointer of node type which will always represent the last node of the list
+//! insertion at kth position in linked list
 
 #include <iostream>
 using namespace std;
@@ -32,6 +31,24 @@ void insertattail(node* &head,int val){
     // new_node->next=NULL;
 }
 
+void insertatpos(node* &head,int val,int pos){
+    if(pos==0){
+        insertathead(head,val);
+        return;
+    }
+    node* new_node= new node(val);
+    node* temp=head;
+    int curr_pos=0;
+    while(curr_pos!=pos-1){
+        temp=temp->next;
+        curr_pos++;
+    }
+
+    // temp is pointing to node at pos-1.
+    new_node->next=temp->next;
+    temp->next=new_node;
+}
+
 // here we r passing by value because we arent making any changes to our original linked list
 void display(node* head){
     node* temp=head;
@@ -50,11 +67,15 @@ int main(){
     display(head);
     insertattail(head,3);
     display(head);
+    insertatpos(head,4,1);
+    display(head);
     return 0;
 }
 
 
-
-// i will make temp a pointer of node type starting from head and will traverse it till we reach the tail node
-// and when temp-> next=null means we are at end node
-// so now we need to insert a new node at the end so for that i will make my temp->next point to the new node that is to be inserted and that new node->next will point to null.  
+//* LOGIC:
+// head will be given and position at which new node is to be inserted
+// so the position at which i want to insert new node say k is that position, so k-1 position will point to my new_node and new_node will point to kth position's node.
+// so i will have temp which i will traverse from head till k-1 position 
+// then i will store temp-> next that will point to k position i will store that in my new_node-> next
+// then i will make temp->next point to my new_node

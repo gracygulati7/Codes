@@ -1,6 +1,53 @@
 //! inserting in a linked list at head of list
 
-#include<iostream>
+#include <iostream>
+using namespace std;
+class node{
+    public:
+    int val;
+    node* next;
+
+    node(int data){
+        val=data;
+        next=NULL;
+    }
+};
+
+// here we r passing by reference because we need to make changes to our original linked list
+void insertathead(node* &head,int val){
+    node* new_node=new node(val);
+    new_node->next=head;
+    head=new_node;
+}
+
+
+// here we r passing by value because we arent making any changes to our original linked list
+void display(node* head){
+    node* temp=head;
+    while(temp!=NULL){
+        cout<<temp->val<<"->";
+        temp=temp->next;
+    }
+    cout<<"NULL"<<endl;
+}
+
+int main(){
+    node* head=NULL;
+    insertathead(head,2);
+    display(head);
+    insertathead(head,1);
+    display(head);
+    return 0;
+}
+
+
+//* LOGIC:
+// add a new node at start of linked list
+// new node ke next mein we will put address of current head node
+// then update head node by this new node
+
+
+/* #include<iostream>
 using namespace std;
 
 class node{
@@ -50,3 +97,5 @@ int main(){
     print(head);
     return 0;
 }
+
+*/
