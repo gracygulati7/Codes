@@ -1,4 +1,0 @@
-gunn,19,33,sikh
-gracy,20,31,hindu
-harleen,17,65,sikh
-himani,01,17,hindu
