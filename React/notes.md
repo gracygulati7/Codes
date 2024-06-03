@@ -1,6 +1,14 @@
 # React JS
 In React, both state and props are used to manage data and render components dynamically, but they serve different purposes and have distinct characteristics.
 
+`React.StrictMode` is a tool in React that helps developers find problems in their code. It works by doing extra checks and warnings while you're building your app (but not when it's live). 
+
+### Key Points:
+- **Extra Checks**: It runs certain functions twice to catch mistakes.
+- **Warns About Old Methods**: Alerts you if you're using outdated React methods.
+- **Development Only**: Only affects the app during development, not in the final product.
+- **Future-Ready**: Helps ensure your code follows best practices and is ready for future updates.
+
 **Props** <br>
 *Definition:* Props (short for properties) are read-only data that are passed from a parent component to a child component. <br>
 They are used to pass information and configurations to child components. <br>
