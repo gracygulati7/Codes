@@ -32,4 +32,6 @@ types of linked list: <br>
 - in this we can only move forward <br>
 -> doubly linked list - every node is connected to its previous and next node <br> 
 - in this we can only move in both directions ie forward or backward <br>
--> circular linked list - last node will point to head node <br>
+-> circular linked list - last node will point to head node ie `while(temp->next!=head)` <br>
+and it will have the same structure as that of singly linked list <br>
+but to display all node values of circular linked list we will use do while loop and condition will be while `temp!=head` <br>
